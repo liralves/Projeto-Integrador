@@ -17,7 +17,7 @@ O objetivo é criar uma plataforma atraente, fácil de navegar e que destaque os
 |  Facilidade de Uso   | Oferecer uma interface amigável e intuitiva, projetada para clientes com diferentes níveis de experiência em tecnologia. |
 |  Funcionalidades Específicas   | Atender às necessidades exclusivas dos clientes. |
  ### BACKLOG BOARD
- ![board do jira](static/images/board_jira.png)
+ ![board do jira](static/images/boardjira.png)
 
  # FUNCIONALIDADES
  - Catálogo de Produtos.
