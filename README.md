@@ -6,7 +6,7 @@
 # DESCRIÇÃO DO PROJETO
 <p align="justify">
 Este projeto consiste no desenvolvimento de um site moderno e responsivo para um cliente que trabalha com venda de doces artesanais, trufas, bolos, cupcakes e outros produtos de confeitaria. 
-O objetivo é criar uma plataforma atraente, fácil de navegar e que destaque os produtos, aumentando a visibilidade e as vendas do negócio.
+O objetivo é criar uma plataforma atraente, fácil de navegar e que destaque os produtos, aumentando a visibilidade e as vendas do negócio. Este projeto consiste na avaliação final da disciplina de Projeto Integrador da Universidade Católica de Pernambuco, curso Bacharelado em Ciência da Computação.
 </p>
 
  # DESENVOLVIMENTO DO PROJETO
