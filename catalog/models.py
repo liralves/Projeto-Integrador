@@ -25,7 +25,9 @@ class Produto(models.Model):
     #abaixo, atributos que essa tabela vai ter
     nome = models.CharField(max_length=100) 
     preco = models.DecimalField(max_digits=10, decimal_places=2)
+    descricao_produto = models.TextField(blank=True, null=True)
     data_cadastro = models.DateTimeField(auto_now_add=True)
+    ativo = models.BooleanField(default=True)
 
     #configuração dos metadados e comportamento da tabela produto, atraves da class Meta
     class Meta:
