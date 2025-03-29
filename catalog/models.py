@@ -28,6 +28,12 @@ class Produto(models.Model):
     descricao_produto = models.TextField(blank=True, null=True)
     data_cadastro = models.DateTimeField(auto_now_add=True)
     ativo = models.BooleanField(default=True)
+    categoria = models.ForeignKey(
+    Categoria,
+    on_delete=models.CASCADE,
+    related_name='produtos',
+    verbose_name='Categoria',
+    )
 
     #configuração dos metadados e comportamento da tabela produto, atraves da class Meta
     class Meta:
