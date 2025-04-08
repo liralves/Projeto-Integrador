@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator
+from django.utils import timezone
 
 #criando a tabela categoria no banco de dados
 class Categoria(models.Model):
@@ -42,4 +43,26 @@ class Produto(models.Model):
 
     #retorno do nome do produto após ser convertido em STRING/JSON 
     def __str__(self):
-        return self.nome
+        return f'{self.nome}, {self.preco}'
+
+class Pedido(models.Model):
+    # Status do pedido (ex: pendente, em preparação, enviado, entregue)
+    STATUS_CHOICES = [
+        ('pendente', 'Pendente'),
+        ('preparando', 'Preparando'),
+        ('enviado', 'Enviado'),
+        ('entregue', 'Entregue'),
+    ]
+    
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE) 
+    data_pedido = models.DateTimeField(default=timezone.now)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pendente')
+    valor_total = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    
+    def __str__(self):
+        return f"Pedido #{self.id} - {self.usuario.username} - {self.status}"
+    
+    class Meta:
+        verbose_name = "Pedido"
+        verbose_name_plural = "Pedidos"
+
