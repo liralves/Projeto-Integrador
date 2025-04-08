@@ -32,3 +32,5 @@ O objetivo é criar uma plataforma atraente, fácil de navegar e que destaque os
 - Django Framework
 - Sqlite3 DB
 
+# DESENVOLVIMENTO BACK-END
+- Utilizando de Python junto ao framework Django, o desenvolvimento backend do projeto conta com integração já realizada com o SQLite (ADMIN), integração de possíveis APIS e desenvolvimento do banco de dados para inserção, leitura, atualização e remoção de dados.
