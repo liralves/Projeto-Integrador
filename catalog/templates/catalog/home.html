@@ -1,25 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="catalog/templates/catalog/static.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Doceria</title>
+  <link rel="stylesheet" href="{'css/style.css'}">
 </head>
+{% load static %}
 <body>
-    <header>
-        <h1>Meu Dashboard</h1>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="{% static 'img/logo.png' %}" alt="Bella Doceria">
+      <h1>Bella <span>Doceria</span></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#conta">Minha Conta</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#favoritos">Favoritos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="container">
-        <div class="card">
-            <h2>Informação 1</h2>
-            <p>Descrição da informação</p>
-        </div>
+  <section id="inicio" class="hero">
+    <h2>Um Mundo de Sabores<br>Em Cada Pedaço</h2>
+    <a class="botao-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank">
+      <img src="{% static 'img/whatsapp-icon.png' %}" alt="WhatsApp"> Faça seu pedido
+    </a>
+  </section>
 
-        <div class="card">
-            <h2>Informação 2</h2>
-            <p>Outra descrição</p>
-        </div>
-    </section>
+  <section id="catalogo" class="produtos">
+    <div class="filtros">
+      <button class="ativo">Todos</button>
+      <button>Bolos e tortas</button>
+      <button>Salgados</button>
+      <button>Doces</button>
+    </div>
+    <div class="lista-produtos">
+      {% for produto in produtos %}
+      <div class="produto" data-categoria="{{ produto.categoria.nome }}">
+        <!-- Removido a parte da imagem -->
+        <h3>{{ produto.nome }}</h3>
+        <p class="preco">R$ {{ produto.preco }}</p>
+        <p>{{ produto.descricao_produto }}</p>  <!-- Exibindo a descrição do produto -->
+        <button class="btn-pedir">PEDIR</button>
+      </div>
+      {% empty %}
+      <p>Nenhum produto disponível.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <footer>
+    <div class="links-rodape">
+      <ul>
+        <li>Início</li>
+        <li>Catálogo</li>
+        <li>Minha Conta</li>
+        <li>Sobre</li>
+        <li>Contato</li>
+      </ul>
+      <ul>
+        <li>Termos de Uso</li>
+        <li>Aviso Legal</li>
+        <li>Políticas de Privacidade e Uso De Cookies</li>
+      </ul>
+    </div>
+    <div class="redes">
+      <img src="{% static 'img/whatsapp-icon.png' %}" alt="WhatsApp">
+      <img src="{% static 'img/instagram-icon.png' %}" alt="Instagram">
+      <img src="{% static 'img/facebook-icon.png' %}" alt="Facebook">
+    </div>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>

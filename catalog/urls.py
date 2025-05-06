@@ -1,6 +1,7 @@
 from django.urls import path, include
 from django.contrib import admin
 from catalog import views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
