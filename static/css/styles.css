@@ -1,0 +1,149 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+header .logo h1 span {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    background-image: url("{% static 'images/logo.png' %}");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.hero .destaque {
+    color: #b085f5;
+    font-weight: bold;
+}
+
+.produtos {
+    padding: 2rem;
+    text-align: center;
+}
+
+.filtros {
+    margin-bottom: 1rem;
+}
+
+.filtros button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filtros .ativo {
+    background-color: #b085f5;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.produto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.produto img {
+    max-width: 50%;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.produto .preco {
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.produto .btn-pedir {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.produto .btn-pedir:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
