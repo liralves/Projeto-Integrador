@@ -43,11 +43,15 @@
     <div class="lista-produtos">
       {% for produto in produtos %}
       <div class="produto" data-categoria="{{ produto.categoria.nome }}">
-        <!-- Removido a parte da imagem -->
+        {% if produto.imagem %}
+        <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
+        {% else %}
+        <img src="{% static 'images/logo.png' %}" alt="Imagem não disponível">
+        {% endif %}
         <h3>{{ produto.nome }}</h3>
         <p class="preco">R$ {{ produto.preco }}</p>
-        <p>{{ produto.descricao_produto }}</p>  <!-- Exibindo a descrição do produto -->
         <button class="btn-pedir">PEDIR</button>
+        
       </div>
       {% empty %}
       <p>Nenhum produto disponível.</p>

@@ -1,9 +1,6 @@
-from django.urls import path, include
-from django.contrib import admin
-from catalog import views
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', views.home, name='home'),  # Página inicial do aplicativo "catalog"
 ]
