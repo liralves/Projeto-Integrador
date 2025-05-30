@@ -5,14 +5,10 @@ from django.utils import timezone
 
 #criando a tabela categoria no banco de dados
 class Categoria(models.Model):
-    #atributos da tabela
     nome = models.CharField(max_length=100, unique=True)
     descricao = models.TextField(blank=True, null=True)
     
-    #retornando o nome após conversão para string/json
     def __str__(self):
-        if self.descricao:
-            return f"{self.nome}: {self.descricao}"
         return self.nome
     
     #configurando como a tabela será exibida no banco de dados

@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Doceria - Favoritos</title>
+  <link rel="stylesheet" href="{% static 'css/Página 12.css' %}">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="logo">
+      <a href="/pagina1.html">
+        <img src="{% static 'images/logo.png' %}" alt="Bella Doceria" style="height: 120px; width: 120px;">
+      </a>
+      <a href="/pagina1.html" class="logo-texto">
+        <h1>Bella <span>Doceria</span></h1>
+      </a>
+    </div>
+    <nav class="menu">
+      <a href="/pagina1.html">Início</a>
+      <a href="Página 2.html">Catálogo</a>
+      <a href="Página 6.html">Minha Conta</a>
+      <a href="Página 10.html">Sobre</a>
+      <a href="Página 11.html">Contato</a>
+      <a href="Página 12.html">Favoritos</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <img src="{% static 'images/12 banner favoritos.png' %}" alt="Favoritos" style="height: 420px;"> 
+    <h2>Favoritos</h2>
+  </section>
+
+  <section class="destaque">
+    <h2>Nossos <span>Favoritos</span></h2>
+    <p>Os produtos mais amados pelos nossos clientes</p>
+    
+    <div id="container-favoritos">
+        <!-- Os produtos favoritos serão exibidos aqui -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-rodape">
+      <div class="conteudo-sobre-imagem">
+        <div class="links-rodape">
+          <ul class="menu-esquerdo">
+            <li><a href="/pagina1.html">Início</a></li>
+            <li><a href="Página 2.html">Catálogo</a></li>
+            <li><a href="Página 6.html">Minha Conta</a></li>
+            <li><a href="Página 10.html">Sobre</a></li>
+            <li><a href="Página 11.html">Contato</a></li>
+          </ul>
+          <ul class="central">
+            <li><a href="index.html">Termos de Uso</a></li>
+            <li><a href="index.html">Aviso Legal</a></li>
+            <li><a href="index.html">Políticas de Privacidade e Cookies</a></li>
+          </ul>
+        </div>
+        <div class="icones-redes-sociais">
+          <a href="https://wa.me/5581996522114" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'images/whatsapp rodapé.png' %}" alt="Ícone do WhatsApp">
+          </a>
+          <a href="https://www.instagram.com/bella.doceria__?igsh=MXE4bHBwbnlyeG8xOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'images/instagram rodapé.png' %}" alt="Ícone do Instagram">
+          </a>
+          <a href="https://www.facebook.com/sua_pagina" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'images/facebook  rodapé.png' %}" alt="Ícone do Facebook">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/Página 12.js' %}"></script>
+
+</body>
+</html>

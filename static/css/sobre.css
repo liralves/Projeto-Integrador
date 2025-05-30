@@ -1,0 +1,628 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Fundo verde acima do cabeçalho */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: #90bd56;
+  z-index: -1;
+}
+
+/* ============ CABEÇALHO COM EFEITOS ============ */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* RESET AGGRESSIVO PARA LINHAS AZUIS */
+.logo h1,
+.logo a,
+.logo h1 span,
+.logo h1:hover,
+.logo a:hover {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* ============ ESTILOS DA LOGO ============ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.logo img {
+  min-width: fit-content;
+  width: 200px;
+  height: auto;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+.logo h1 {
+  font-size: 42px;
+  color: #333;
+  transition: all 0.3s ease;
+  transform-origin: left center;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.logo:hover h1 {
+  transform: scale(1.03);
+  text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.logo h1 span {
+  font-size: 42px;
+  color: #e91e63;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.logo:hover h1 span {
+  color: #c2185b;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  transform-origin: center;
+  padding: 5px 0;
+}
+
+.menu a:hover {
+  color: #e91e63;
+  transform: scale(1.15);
+  opacity: 0.95;
+  filter: brightness(1.15) drop-shadow(0 3px 5px rgba(0,0,0,0.1));
+}
+
+/* ============ BANNER ============ */
+.banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 0px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.banner:hover img {
+  transform: scale(1.02);
+}
+
+.banner .button {
+    display: inline-block;
+    background-color: #c0ab0a;
+    color: rgb(0, 0, 0);
+    padding: 15px 200px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+    border: 2px solid transparent;
+    animation: fadeInUp 1s ease-in-out;
+    
+    /* Posicionamento absoluto para mover o botão */
+    position: absolute;
+    bottom: 15%;  /* Ajuste para mover para cima (aumente o valor para descer) */
+    left: 15%;    /* Ajuste para mover para a esquerda (aumente o valor para direita) */
+    transform: translate(-15%, 30%); /* Ajuste fino do posicionamento */
+}
+
+.banner .button:hover {
+    background-color: #c2185b;
+    transform: translate(-15%, 27%); /* 27% mantém o alinhamento com 3px a menos no Y */
+    box-shadow: 0 6px 20px rgba(194, 24, 91, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ SEÇÃO SOBRE ============ */
+.sobre {
+  position: relative;
+  padding: 0;
+  max-width: 100%;
+  margin: -30px 0 0 0; /* Margem negativa no topo para subir */
+  overflow: hidden;
+  z-index: 0; /* Garante que fique acima do elemento anterior */
+}
+
+.sobre img {
+  width: 100%; 
+  height: auto;
+  display: block;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  transition: transform 0.5s ease;
+}
+
+.sobre img:hover {
+  transform: scale(1.02);
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .sobre {
+    margin-top: -10px; /* Margem menor em dispositivos móveis */
+  }
+}
+
+/* ============ SEÇÃO HISTÓRIA ============ */
+.historia {
+  position: relative;
+  isolation: isolate; /* Novo */
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+  min-height: 800px;
+}
+
+/* Estilo base para imagens - REMOVA position:relative */
+.historia img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.banner-principal {
+  width: 100%;
+  margin: 0 auto 30px;
+  position: relative; /* Adicione esta linha */
+  top: -50px; /* Agora funcionará */
+  z-index: 0;
+}
+
+/* Imagens decorativas - POSICIONAMENTO CORRETO */
+.decorativa-1 {
+  width: 33.8%;
+  position: absolute;
+  top: -4%;
+  left: 10%;
+  z-index: 1; /* Alterado de 3 para 1 */
+  pointer-events: auto; /* Novo */
+}
+
+.decorativa-2 {
+  width: 35%;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  z-index: 1; /* Alterado de 3 para 1 */
+  pointer-events: auto; /* Novo */
+}
+
+.decorativa-1,
+.decorativa-2 {
+  box-shadow: none !important;
+  filter: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+/* Remove pseudo-elementos */
+.decorativa-1::before,
+.decorativa-1::after,
+.decorativa-2::before,
+.decorativa-2::after {
+  content: none !important;
+}
+
+/* Container do Conteúdo */
+.historia-content {
+  max-width: 800px;
+  margin: -50px auto 60px; /* Margem negativa para sobrepor */
+  padding: 30px;
+  position: relative;
+  z-index: 3;
+  border-radius: 8px;
+}
+
+/* Botão */
+.historia .button {
+  display: inline-block;
+  background-color: #c0ab0a;
+  color: white;
+  padding: 20px 70px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: absolute;
+  top: -190px; /* Ajuste conforme necessário */
+  right: 0px; /* Ajuste conforme necessário */
+  z-index: 2; /* Alterado de 100 para 2 */
+  will-change: transform;
+}
+
+.historia .button:hover {
+  background-color: #c2185b;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+}
+
+/* REMOVA ou MODIFIQUE este trecho */
+.historia img:hover {
+  transform: scale(1.03);
+  z-index: 0; /* Isso está causando o problema */
+}
+
+/* SUBSTITUA por isso: */
+.decorativa-1:hover, 
+.decorativa-2:hover {
+  transform: scale(1.03);
+  z-index: 1; /* Alterado de 3 para 1 */
+}
+
+.banner-principal:hover {
+  transform: scale(1.01); /* Efeito mais sutil para o banner */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .historia {
+    padding: 20px 0;
+  }
+  
+  .historia-content {
+    margin: 0 auto 30px;
+    padding: 20px;
+  }
+  
+  .decorativa-1,
+  .decorativa-2 {
+    position: relative;
+    width: 80%;
+    margin: 15px auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+  
+  .historia .button {
+    padding: 10px 25px;
+  }
+}
+
+/* ============ RODAPÉ ============ */
+.rodape {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  margin-top: -60px; /* Adicionado para subir o rodapé */
+}
+
+.container-rodape {
+  background-image: url('imagens/banner\ final\ da\ página\ -\ rodapé/banner final.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 283px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+  padding: 0;
+  color: white;
+  position: relative;
+  margin-top: -30px; /* Adicionado para subir o banner */
+}
+
+/* Fundo verde abaixo do rodapé - agora posicionado diretamente após o banner */
+.container-rodape::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  height: 550px;
+  background-color: #90bd56;
+  z-index: -1;
+}
+
+.conteudo-sobre-imagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.links-rodape {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+/* MENU ESQUERDO */
+.menu-esquerdo {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.menu-esquerdo li {
+  margin: 5px 0;
+}
+
+.menu-esquerdo a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.menu-esquerdo a:hover {
+  color: #f0c040;
+  transform: scale(1.15);
+  opacity: 0.95;
+  filter: brightness(1.15) drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+}
+
+/* MENU CENTRAL */
+.central {
+  list-style: none;
+  padding: 0;
+  margin: 0 100px 0 0px;
+  text-align: center;
+  flex: 1;
+}
+
+.central li {
+  margin: 12px 0;
+}
+
+.central a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 2px 5px;
+  transform-origin: center;
+}
+
+.central a:hover {
+  color: #f0c040;
+  transform: scale(1.15);
+  opacity: 0.95;
+  filter: brightness(1.15) drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+}
+
+/* CONTAINER PRINCIPAL */
+.links-rodape {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+/* MENUS */
+.menus-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+/* ÍCONES REDES SOCIAIS - AJUSTADOS PARA DIREITA */
+.icones-redes-sociais {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+  align-items: center;
+  padding-right: 100px;
+  position: relative;
+  top: -150px;
+  margin-bottom: -60px;
+}
+
+.icones-redes-sociais a {
+  display: inline-block;
+  line-height: 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  transform-origin: center;
+}
+
+.icones-redes-sociais img {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+  transition: all 0.3s ease;
+}
+
+.icones-redes-sociais a:hover img {
+  transform: scale(1.15);
+  opacity: 0.95;
+  filter: brightness(1.15) drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+}
+
+/* ============ RESPONSIVIDADE ============ */
+@media (max-width: 768px) {
+  body::before {
+      height: 20px;
+  }
+  
+  .container-rodape::after {
+      height: 40px;
+      bottom: -40px;
+  }
+  
+  .icones-redes-sociais {
+      top: -30px;
+      margin-bottom: -15px;
+      gap: 20px;
+      margin-left: auto;
+      padding-right: 20px;
+      justify-content: flex-end;
+      margin: 25px auto 0;
+  }
+  
+  .icones-redes-sociais img {
+      width: 50px;
+      height: 50px;
+  }
+  
+  .menus-container {
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .conteudo-sobre-imagem {
+      padding-top: 10px;
+  }
+
+  .central {
+      margin-left: 20px;
+      text-align: center;
+  }
+
+  .menu-esquerdo a:hover,
+  .central a:hover {
+      transform: scale(1.1);
+  }
+
+  .topo {
+      flex-direction: column;
+      padding: 15px;
+      margin-top: 20px;
+  }
+
+  .logo {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .logo img {
+      width: 150px;
+  }
+
+  .logo h1, .logo h1 span {
+      font-size: 32px;
+      text-decoration: none !important;
+  }
+
+  .menu {
+      margin-top: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .menu a:hover {
+      transform: scale(1.1);
+  }
+
+  .filtros button:hover,
+  .filtros button.ativo {
+      transform: scale(1.1);
+  }
+
+  /* Ajustes específicos para o rodapé no mobile */
+  .rodape {
+    margin-top: -30px;
+  }
+  
+  .container-rodape {
+    margin-top: -15px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Doceria - Contato</title>
+  <link rel="stylesheet" href="{% static 'css/contato.css' %}" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="topo">
+    <div class="logo">
+      <a href="{% url 'home' %}">
+        <img src="{% static 'images/logo.png'%}" alt="Bella Doceria" style="height: 120px; width: 120px;">
+      </a>
+      <a href="{% url 'home' %}" class="logo-texto">
+        <h1>Bella <span>Doceria</span></h1>
+      </a>
+    </div>
+    <nav class="menu">
+      <a href="{% url 'home' %}">Início</a>
+      <a href="Página 6.html">Minha Conta</a>
+      <a href="{% url 'sobre' %}">Sobre</a>
+      <a href="{% url 'contato' %}">Contato</a>
+      <a href="Página 12.html">Favoritos</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <img src="{% static 'images/10-banner-imagem.png'%}" alt="Banner principal da Bella Doceria">
+    <a href="https://wa.me/5581996522114" class="button">Faça seu pedido</a>
+</section>
+
+  <!-- Contato -->
+  <main class="contato-section">
+    <div class="formulario">
+      <h2>Contato</h2>
+      <form>
+        <label for="nome">Seu nome (obrigatório)</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Seu email (obrigatório)</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="assunto">Assunto</label>
+        <input type="text" id="assunto" name="assunto" />
+
+        <label for="mensagem">Sua mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+    </div>
+
+    <div class="info-contato">
+  <h2>Emails oficiais</h2>
+  <p>
+    <a href="mailto:contato@empresa.com" class="contato-link">📧 Email da empresa</a>
+  </p>
+
+  <h2>WhatsApp</h2>
+  <p>
+    <a href="https://wa.me/5581996522114" target="_blank" class="contato-link">🟢 Whatsapp da empresa</a>
+  </p>
+
+  <h2>Instagram</h2>
+  <p>
+    <a href="https://www.instagram.com/bella.doceria__?igsh=MXE4bHBwbnlyeG8xOQ%3D%3D&utm_source=qr" target="_blank" class="contato-link">📸 Instagram da empresa</a>
+  </p>
+
+  <h2>Site oficial</h2>
+  <p>
+    <a href="https://www.empresa.com" target="_blank" class="contato-link">🌐 Site da empresa</a>
+  </p>
+</div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container-rodape">
+      <div class="conteudo-sobre-imagem">
+        <div class="links-rodape">
+          <ul class="menu-esquerdo">
+            <li><a href="home.html">Início</a></li>
+            <li><a href="Página 6.html">Minha Conta</a></li>
+            <li><a href="Página 10.html">Sobre</a></li>
+            <li><a href="Página 11.html">Contato</a></li>
+          </ul>
+          <ul class="central">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Políticas de Privacidade e Cookies</a></li>
+          </ul>
+        </div>
+        <div class="icones-redes-sociais">
+          <a href="https://wa.me/5581996522114" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'images/whatsapp rodapé.png'%}" alt="Ícone do WhatsApp">
+          </a>
+          <a href="https://www.instagram.com/bella.doceria__?igsh=MXE4bHBwbnlyeG8xOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'images/instagram rodapé.png'%}" alt="Ícone do Instagram">
+          </a>
+          <a href="https://www.facebook.com/sua_pagina" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'images/facebook  rodapé.png' %}" alt="Ícone do Facebook">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
