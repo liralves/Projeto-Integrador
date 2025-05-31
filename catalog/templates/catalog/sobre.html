@@ -20,8 +20,8 @@
     <nav class="menu">
       <a href="{% url 'home' %}">Início</a>
       <a href="Página 6.html">Minha Conta</a>
-      <a href="Página 10.html">Sobre</a>
-      <a href="Página 11.html">Contato</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
+        <a href="{% url 'contato' %}">Contato</a>
       <a href="Página 12.html">Favoritos</a>
     </nav>
   </header>
@@ -60,8 +60,8 @@
                         <li><a href="{% url 'home' %}">Início</a></li>
                         <li><a href="Página 2.html">Catálogo</a></li>
                         <li><a href="Página 6.html">Minha Conta</a></li>
-                        <li><a href="Página 10.html">Sobre</a></li>
-                        <li><a href="Página 11.html">Contato</a></li>
+                        <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                        <li><a href="{% url 'contato' %}">Contato</a></li>
                     </ul>
                     <ul class="central">
                         <li><a href="index.html">Termos de Uso</a></li>
