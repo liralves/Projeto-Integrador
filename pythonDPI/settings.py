@@ -23,21 +23,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-q$24%@zb^%n(fv)@+%r2%)rf=$z1ir_6r30%+o*f=pn49f)w1-"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'https://localhost:8000',
 ]
 
-ALLOWED_HOSTS = ["belladoceria.pythonanywhere.com"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "django.contrib.admin",
-    "django.contrib.auth", 
+    "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
