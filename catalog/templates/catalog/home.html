@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bella Doceria - Inicio</title>
-  <link rel="stylesheet" href="{% static 'css/pagina1.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
   <style>
     /* Estilos adicionais para os filtros */
     .filtros button {
@@ -68,7 +68,7 @@
 <body>
   <header class="topo">
     <div class="logo">
-      <a href="{% url 'home' %}">  <!-- Se tiver URL named 'pagina1', senão deixe href="#" -->
+      <a href="{% url 'home' %}">  
         <img src="{% static 'images/logo.png' %}" alt="Bella Doceria" style="height: 120px; width: 120px;">
       </a>
       <a href="{% url 'home' %}" class="logo-texto">
@@ -77,10 +77,8 @@
     </div>
     <nav class="menu">
       <a href="{% url 'home' %}">Início</a>
-      <a href="{% static 'Páginas html/Página 6.html' %}">Minha Conta</a>
       <a href="{% url 'sobre' %}">Sobre</a>
       <a href="{% url 'contato' %}">Contato</a>
-      <a href="{% static 'Páginas html/Página 12.html' %}">Favoritos</a>
     </nav>
   </header>
 
@@ -130,16 +128,25 @@
   </section>
 
   <section id="avaliacoes" class="avaliacoes">
-    <h2>Avaliações dos Clientes</h2>
-    <div class="cards-avaliacoes">
-      <div class="card-avaliacao">
-        <h3>Paula Soares</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p class="comentario">Doces maravilhosos!!!<br>Não poderia ter feito escolha melhor...</p>
-      </div>
-      <!-- Repetições removidas por brevidade -->
+  <h2>Avaliações dos Clientes</h2>
+  <div class="cards-avaliacoes"> <div class="card-avaliacao">
+      <h3>Paula Soares</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p class="comentario">Doces maravilhosos!!!<br>Não poderia ter feito escolha melhor...</p>
     </div>
-  </section>
+
+    <div class="card-avaliacao">
+      <h3>Marcos Andrade</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p class="comentario">Atendimento impecável e os doces são uma delícia! <br>Super recomendo a Bella Doceria.</p>
+    </div>
+
+    <div class="card-avaliacao">
+      <h3>Juliana Costa</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p class="comentario">Que capricho! Tudo muito gostoso e bem apresentado.<br> Virei cliente fiel!</p>
+    </div>
+  </div> </section>
 
   <footer class="rodape">
     <div class="container-rodape">
@@ -148,14 +155,13 @@
         <div class="links-rodape">
           <ul class="menu-esquerdo">
             <li><a href="{% url 'home' %}">Início</a></li>
-            <li><a href="{% static 'Páginas html/Página 6.html' %}">Minha Conta</a></li>
             <li><a href="{% url 'sobre' %}">Sobre</a></li>
             <li><a href="{% url 'contato' %}">Contato</a></li>
           </ul>
           <ul class="central">
-            <li><a href="{% static 'home.html' %}">Termos de Uso</a></li>
-            <li><a href="{% static 'home.html' %}">Aviso Legal</a></li>
-            <li><a href="{% static 'index.html' %}">Políticas de Privacidade e Cookies</a></li>
+            <li><a href="{% url 'privacidade' %}">Termos de Uso</a></li>
+            <li><a href="{% url 'privacidade' %}">Aviso Legal</a></li>
+            <li><a href="{% url 'privacidade' %}">Políticas de Privacidade</a></li>
           </ul>
         </div>
         <div class="icones-redes-sociais">

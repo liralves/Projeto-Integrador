@@ -21,10 +21,8 @@
     </div>
     <nav class="menu">
       <a href="{% url 'home' %}">Início</a>
-      <a href="Página 6.html">Minha Conta</a>
       <a href="{% url 'sobre' %}">Sobre</a>
       <a href="{% url 'contato' %}">Contato</a>
-      <a href="Página 12.html">Favoritos</a>
     </nav>
   </header>
 
@@ -41,8 +39,8 @@
         <label for="nome">Seu nome (obrigatório)</label>
         <input type="text" id="nome" name="nome" required />
 
-        <label for="email">Seu email (obrigatório)</label>
-        <input type="email" id="email" name="email" required />
+        <label for="numero">Seu número (obrigatório)</label>
+        <input type="tel" id="numero" name="numero" required />
 
         <label for="assunto">Assunto</label>
         <input type="text" id="assunto" name="assunto" />
@@ -55,10 +53,6 @@
     </div>
 
     <div class="info-contato">
-  <h2>Emails oficiais</h2>
-  <p>
-    <a href="mailto:contato@empresa.com" class="contato-link">📧 Email da empresa</a>
-  </p>
 
   <h2>WhatsApp</h2>
   <p>
@@ -70,39 +64,35 @@
     <a href="https://www.instagram.com/bella.doceria__?igsh=MXE4bHBwbnlyeG8xOQ%3D%3D&utm_source=qr" target="_blank" class="contato-link">📸 Instagram da empresa</a>
   </p>
 
-  <h2>Site oficial</h2>
-  <p>
-    <a href="https://www.empresa.com" target="_blank" class="contato-link">🌐 Site da empresa</a>
-  </p>
 </div>
   </main>
 
   <!-- Rodapé -->
-  <footer>
+  <footer class="rodape">
     <div class="container-rodape">
+      <img src="{% static 'images/banner final.png' %}" alt="Banner Rodapé" style="width: 100%; height: auto; display: block;">
       <div class="conteudo-sobre-imagem">
         <div class="links-rodape">
           <ul class="menu-esquerdo">
-            <li><a href="home.html">Início</a></li>
-            <li><a href="Página 6.html">Minha Conta</a></li>
-            <li><a href="Página 10.html">Sobre</a></li>
-            <li><a href="Página 11.html">Contato</a></li>
+            <li><a href="{% url 'home' %}">Início</a></li>
+            <li><a href="{% url 'sobre' %}">Sobre</a></li>
+            <li><a href="{% url 'contato' %}">Contato</a></li>
           </ul>
           <ul class="central">
-            <li><a href="#">Termos de Uso</a></li>
-            <li><a href="#">Aviso Legal</a></li>
-            <li><a href="#">Políticas de Privacidade e Cookies</a></li>
+            <li><a href="{% url 'privacidade' %}">Termos de Uso</a></li>
+            <li><a href="{% url 'privacidade' %}">Aviso Legal</a></li>
+            <li><a href="{% url 'privacidade' %}">Políticas de Privacidade</a></li>
           </ul>
         </div>
         <div class="icones-redes-sociais">
-          <a href="https://wa.me/5581996522114" target="_blank" rel="noopener noreferrer">
-            <img src="{% static 'images/whatsapp rodapé.png'%}" alt="Ícone do WhatsApp">
+          <a href="https://wa.me/5581996522114" target="_blank">
+            <img src="{% static 'images/whatsapp rodapé.png' %}" alt="WhatsApp">
           </a>
-          <a href="https://www.instagram.com/bella.doceria__?igsh=MXE4bHBwbnlyeG8xOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-            <img src="{% static 'images/instagram rodapé.png'%}" alt="Ícone do Instagram">
+          <a href="https://www.instagram.com/bella.doceria__" target="_blank">
+            <img src="{% static 'images/instagram rodapé.png' %}" alt="Instagram">
           </a>
-          <a href="https://www.facebook.com/sua_pagina" target="_blank" rel="noopener noreferrer">
-            <img src="{% static 'images/facebook  rodapé.png' %}" alt="Ícone do Facebook">
+          <a href="https://www.facebook.com/sua_pagina" target="_blank">
+            <img src="{% static 'images/facebook  rodapé.png' %}" alt="Facebook">
           </a>
         </div>
       </div>

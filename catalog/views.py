@@ -26,3 +26,6 @@ def contato(request):
 
 def sobre(request):
     return render(request, 'catalog/sobre.html')
+
+def privacidade(request):
+    return render(request, 'catalog/privacidade.html')

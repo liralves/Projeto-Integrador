@@ -444,8 +444,17 @@ form textarea { animation-delay: 0.45s; }
   margin-top: -60px; /* Adicionado para subir o rodapé */
 }
 
+.rodape {
+  width: 100%;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60px;
+  background-color: #fff;
+}
+
 .container-rodape {
-  background-image: url('imagens/banner\ final\ da\ página\ -\ rodapé/banner final.png');
+  background-image: url('');
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -456,10 +465,10 @@ form textarea { animation-delay: 0.45s; }
   padding: 0;
   color: white;
   position: relative;
-  margin-top: -30px; /* Adicionado para subir o banner */
+  margin-bottom: 0;
 }
 
-/* Fundo verde abaixo do rodapé - agora posicionado diretamente após o banner */
+/* Linha verde abaixo do banner do rodapé */
 .container-rodape::after {
   content: '';
   position: absolute;
@@ -468,7 +477,28 @@ form textarea { animation-delay: 0.45s; }
   right: 0;
   height: 60px;
   background-color: #90bd56;
-  z-index: -1;
+  z-index: 1;
+}
+
+/* CONTAINER DOS LINKS SOBRE O BANNER */
+.conteudo-rodape {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* CONTEÚDO QUE FICA SOBRE A IMAGEM */
+.conteudo-sobre-imagem {
+  position: absolute;
+  top: -300px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .conteudo-sobre-imagem {
@@ -492,6 +522,7 @@ form textarea { animation-delay: 0.45s; }
   max-width: 1000px;
   margin-bottom: 20px;
 }
+
 
 /* MENU ESQUERDO */
 .menu-esquerdo {
